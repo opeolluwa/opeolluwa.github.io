@@ -1,8 +1,22 @@
 <template>
   <AppNavigation class="view" />
   <main class="view">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque corrupti ut a distinctio nostrum molestiae id q
-    porro reiciendis. Enii impedit ullam fugit fugiat libero corporis voluptate officiis perspiciatis!
+    <!--contact form modal-->
+    <AppModal title="Contact Form" v-show="showModal" @close-modal="showModal = false">
+      <template #content>
+        <form action="
+              ">
+          <!--fullname-->
+          <BaseTextInput label="Fullname" placeholder="Enter your fullname" />
+          <!--email-->
+          <BaseTextInput label="Email" placeholder="Enter your email" />
+          <!-- subject -->
+          <BaseTextInput label="Email subject" placeholder="Enter email subject" />
+          <!--message body-->
+          <BaseTextarea label="Fullname" placeholder="Enter message body" />
+        </form>
+      </template>
+    </AppModal>
   </main>
   <AppFooter />
 </template>

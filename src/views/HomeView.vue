@@ -168,22 +168,7 @@ export default {
         </button>
       </div>
       <div>
-        <!--contact form modal-->
-        <AppModal title="Contact Form" v-show="showModal" @close-modal="showModal = false">
-          <template #content>
-            <form action="
-          ">
-              <!--fullname-->
-              <BaseTextInput label="Fullname" placeholder="Enter your fullname" />
-              <!--email-->
-              <BaseTextInput label="Email" placeholder="Enter your email" />
-              <!-- subject -->
-              <BaseTextInput label="Email subject" placeholder="Enter email subject" />
-              <!--message body-->
-              <BaseTextarea label="Fullname" placeholder="Enter message body" />
-            </form>
-          </template>
-        </AppModal>
+      
       </div>
     </div>
   </main>
@@ -325,55 +310,17 @@ main h2 {
 
 /*-------------------------------contact me---------------------------*/
 
-
-
-#contact-me form {
-  display: flex;
-  column-gap: 100px;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#contact-me form label {
-  font-size: 14px;
-}
-
-#contact-me form button {
-  width: 100%;
-}
-
-#contact-me form textarea {
-  font-size: 16px;
-  padding: 10px;
-}
-
-/**---------smaller screens ------------ */
-@media screen and (max-width: 768px) {
-  #contact-me form {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    column-gap: 20px;
-    flex-direction: column;
-    column-gap: 20px;
-  }
-
-  #contact-me button {
-    width: 100%;
-  }
-}
-
 #contact-me h2 {
   font-weight: 400;
   font-size: 40px;
-  line-height: 45px;
-  margin-bottom: 5px;
+  line-height: 36px;
+  margin-bottom: 0px;
 }
 
 #contact-me h2+p {
-  margin-top: 0;
+  margin-top: 12px;
   margin-bottom: 40px;
+  font-size: 24px;
 }
 
 #contact-me button {
@@ -390,37 +337,6 @@ main h2 {
 }
 
 
-
-#contact-me .form-feed label,
-#contact-me .form-feed input {
-  display: block;
-}
-
-#contact-me .form-feed {
-  margin-bottom: 15px;
-}
-
-#contact-me .form-feed label {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: "mulish";
-  margin-bottom: 12px;
-}
-
-#contact-me img {
-  max-width: 50%;
-}
-
-#contact-me .form-feed input,
-#contact-me .form-feed textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 18px;
-  line-height: 22px;
-}
 
 /** --------------------------small screens------------------------------- */
 @media screen and (max-width: 562px) {
@@ -605,60 +521,5 @@ main h2 {
   /*-------------------------------contact me---------------------------*/
 
 
-  #contact-me h2 {
-    font-weight: 400;
-    font-size: 40px;
-    font-size: 24px;
-    line-height: 24px;
-    margin-bottom: 0px;
-  }
-
-  #contact-me h2+p {
-    margin-top: 12px;
-    margin-bottom: 40px;
-  }
-
-  #contact-me button {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    column-gap: 12px;
-    background: var(--default-content-color);
-    border: 1px solid #efefef;
-    display: inline-flex;
-    color: var(--white);
-    cursor: pointer;
-  }
-
-  #contact-me form {
-    max-width: 90%;
-  }
-
-  #contact-me .form-feed label,
-  #contact-me .form-feed input {
-    display: block;
-  }
-
-  #contact-me .form-feed {
-    margin-bottom: 35px;
-  }
-
-  #contact-me .form-feed label {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 7.5px;
-  }
-
-  #contact-me .form-feed input,
-  #contact-me .form-feed textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 18px;
-    line-height: 22px;
-  }
 }
 </style>
