@@ -1,7 +1,7 @@
 <template>
   <div id="app-logo">
     <router-link :to="{ name: 'home' }"
-      >Opeolluwa<span class="emphasis">.</span>
+      >Opeolluwa
     </router-link>
   </div>
 </template>

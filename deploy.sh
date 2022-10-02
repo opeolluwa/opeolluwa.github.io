@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+# guide on https://pages.github.com/
 # abort on errors
 set -e
 

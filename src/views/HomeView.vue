@@ -10,6 +10,9 @@ import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
 // import VueFinalModal from "vue-final-modal";
 import IconRight from "@/components/icons/IconRight.vue";
+import AppModal from "../components/AppModal.vue";
+import BaseTextInput from "../components/BaseTextInput.vue";
+import BaseTextarea from "../components/BaseTextarea.vue";
 export default {
   name: "HomeView",
   components: {
@@ -23,6 +26,9 @@ export default {
     Slide,
     // VueFinalModal,
     IconRight,
+    AppModal,
+    BaseTextInput,
+    BaseTextarea
   },
   data: () => ({
     breakpoints: {
@@ -162,11 +168,22 @@ export default {
         </button>
       </div>
       <div>
-
-        <!--   <vue-final-modal v-model="showModal">
-          Modal Content Here
-        </vue-final-modal> -->
-        <img src="@/assets/images/illustrations/contact-3.svg" alt="contact me" />
+        <!--contact form modal-->
+        <AppModal title="Contact Form" v-show="showModal" @close-modal="showModal = false">
+          <template #content>
+            <form action="
+          ">
+              <!--fullname-->
+              <BaseTextInput label="Fullname" placeholder="Enter your fullname" />
+              <!--email-->
+              <BaseTextInput label="Email" placeholder="Enter your email" />
+              <!-- subject -->
+              <BaseTextInput label="Email subject" placeholder="Enter email subject" />
+              <!--message body-->
+              <BaseTextarea label="Fullname" placeholder="Enter message body" />
+            </form>
+          </template>
+        </AppModal>
       </div>
     </div>
   </main>
@@ -308,12 +325,43 @@ main h2 {
 
 /*-------------------------------contact me---------------------------*/
 
-#contact-me {
+
+
+#contact-me form {
   display: flex;
-  align-self: center;
-  /* column-gap: 15px; */
-  flex-direction: row-reverse;
+  column-gap: 100px;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#contact-me form label {
+  font-size: 14px;
+}
+
+#contact-me form button {
+  width: 100%;
+}
+
+#contact-me form textarea {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/**---------smaller screens ------------ */
+@media screen and (max-width: 768px) {
+  #contact-me form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    flex-direction: column;
+    column-gap: 20px;
+  }
+
+  #contact-me button {
+    width: 100%;
+  }
 }
 
 #contact-me h2 {
@@ -341,9 +389,7 @@ main h2 {
   cursor: pointer;
 }
 
-#contact-me form {
-  max-width: 45%;
-}
+
 
 #contact-me .form-feed label,
 #contact-me .form-feed input {
@@ -558,13 +604,6 @@ main h2 {
 
   /*-------------------------------contact me---------------------------*/
 
-  #contact-me {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
-    min-height: unset;
-    flex-direction: column;
-  }
 
   #contact-me h2 {
     font-weight: 400;
