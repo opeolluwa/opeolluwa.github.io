@@ -11,9 +11,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "deploy":" git push && bash deploy.sh"
+    "deploy": " git push && bash deploy.sh"
   },
   "dependencies": {
+    "@iconify/vue": "^4.0.0",
     "animate.css": "^4.1.1",
     "pinia": "^2.0.17",
     "vue": "^3.2.37",
