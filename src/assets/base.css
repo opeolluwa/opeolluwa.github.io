@@ -25,8 +25,8 @@ html {
   --lighttext: #fff;
 
   --default-content-color: #7714f1;
+  --primary: #7714f1;
   /* default for mail and documentation items*/
-  --primary: #00cfe8;
   --secondary: #707070;
   --tertiary: #7714f1;
   --warning: #fdca00;

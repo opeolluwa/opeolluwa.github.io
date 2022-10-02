@@ -10,10 +10,8 @@ import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
 // import VueFinalModal from "vue-final-modal";
 import IconRight from "@/components/icons/IconRight.vue";
-import AppModal from "../components/AppModal.vue";
-import BaseTextInput from "../components/BaseTextInput.vue";
-import BaseTextarea from "../components/BaseTextarea.vue";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "HomeView",
   components: {
     AppNavigation,
@@ -26,9 +24,11 @@ export default {
     Slide,
     // VueFinalModal,
     IconRight,
-    AppModal,
-    BaseTextInput,
-    BaseTextarea
+  },
+  methods: {
+    goToContactPage() {
+      this.$router.push("/contact");
+    }
   },
   data: () => ({
     breakpoints: {
@@ -80,7 +80,7 @@ export default {
       },
     ],
   }),
-};
+});
 </script>
 <template>
   <main>
@@ -162,13 +162,13 @@ export default {
           Send a <br /><span class="emphasis capitalize">Quick</span> message
         </h2>
         <p>Let&apos;s talk about everything</p>
-        <button @click="showModal = true">
-          Open form
+        <button @click="goToContactPage">
+          Send Email
           <IconCommunity />
         </button>
       </div>
       <div>
-      
+
       </div>
     </div>
   </main>
@@ -520,6 +520,18 @@ main h2 {
 
   /*-------------------------------contact me---------------------------*/
 
+  #contact-me h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 0px;
+  }
+
+  #contact-me h2+p {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
 
 }
 </style>

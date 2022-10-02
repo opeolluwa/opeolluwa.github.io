@@ -52,6 +52,7 @@ export default defineComponent({
   margin-bottom: 35px;
   font-size: 16px;
   text-align: left !important;
+  max-width: 80%;
 }
 
 .form-field label {
@@ -62,24 +63,26 @@ export default defineComponent({
 }
 
 .form-field input {
-  /* width: 500px; */
   width: 100%;
-  height: 30px;
+  width: 100%;
+  height: 35px;
   border-radius: 8px;
   padding: 7px 25px 7px 25px;
   border: 1px solid var(--border-color);
-  /* border-radius: 5px; */
+  border-radius: 5px;
   display: block;
 }
 
 .form-field input::placeholder {
   display: inline-block;
   letter-spacing: 1.25px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+  font-weight: 300;
+  font-family: "iter";
 }
 
 .form-field input:hover,
