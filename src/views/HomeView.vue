@@ -75,8 +75,9 @@ export default defineComponent({
 
       {
         tech: "Syntactically Awesome Stylesheets",
-        icon: "sass",
+        icon: "mysql",
         url: "https://www.rust-lang.org/",
+        more:"-wordmark"
       },
     ],
   }),
