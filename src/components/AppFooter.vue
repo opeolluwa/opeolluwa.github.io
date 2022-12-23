@@ -20,9 +20,9 @@
         </a>
       </div>
 
-      <!-- <small class="d-none">
-        &copy; {{ new Date().getFullYear() }} Opeoluwa - All Rights Reserved
-      </small> -->
+      <small class="d-none">
+        &copy; {{ new Date().getFullYear() }} Adeoye Adefemi - All Rights Reserved
+      </small>
     </div>
   </footer>
 </template>
@@ -36,7 +36,7 @@ footer {
   background-color: #f0eeee;
 }
 
-footer > * {
+footer>* {
   margin-bottom: 15px;
 }
 
@@ -84,6 +84,7 @@ footer .social a {
 .social {
   margin-top: 0;
 }
+
 footer small {
   margin-top: 25px;
   text-align: center;

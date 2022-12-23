@@ -12,8 +12,7 @@
   -->
   <div class="form-field">
     <label :for="label">{{ label }}</label>
-    <input :type="type" :id="label" :placeholder="'-- ' + placeholder + ' --'" @input="updateModelValue"
-      :value="modelValue" />
+    <input :type="type" :id="label" :placeholder="placeholder" @input="updateModelValue" :value="modelValue" />
   </div>
 </template>
 
@@ -59,7 +58,7 @@ export default defineComponent({
   display: block;
   margin-bottom: 7.5px;
   text-transform: capitalize;
-  font-family: "Open Sans";
+  /* font-family: "Open Sans"; */
 }
 
 .form-field input {

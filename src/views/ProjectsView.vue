@@ -1,14 +1,14 @@
 <template>
   <AppNavigation class="view" />
-  <main class="view">
+  <div class="view container">
     <ul>
       <li v-for="(project, index) in 5" :key="index">
         <ProjectCard />
       </li>
     </ul>
     <IconMore />
-  </main>
-  <AppFooter  />
+  </div>
+  <AppFooter />
 
 </template>
 
@@ -29,6 +29,14 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  background-position: center center;
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #c9cde0);
+  background: -moz-linear-gradient(bottom, #ffffff, #f2f4ff);
+  background: linear-gradient(to top, #ffffff, #f2f4ff);
+}
+
 ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -42,9 +50,10 @@ li {
   margin: 35px 0;
   padding: 0;
 }
+
 @media screen and (max-width: 768px) {
   ul {
     grid-template-columns: 1fr;
-  }  
+  }
 }
 </style>

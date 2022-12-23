@@ -11,6 +11,7 @@ import { Carousel, Slide } from "vue3-carousel";
 // import VueFinalModal from "vue-final-modal";
 import IconRight from "@/components/icons/IconRight.vue";
 import { defineComponent } from "vue";
+import BaseTextInput from "@/components/BaseTextInput.vue";
 export default defineComponent({
   name: "HomeView",
   components: {
@@ -24,6 +25,7 @@ export default defineComponent({
     Slide,
     // VueFinalModal,
     IconRight,
+    BaseTextInput
   },
   methods: {
     goToContactPage() {
@@ -181,13 +183,15 @@ export default defineComponent({
           Send a <br /><span class="emphasis capitalize">Quick</span> message
         </h2>
         <p>Let&apos;s talk about everything</p>
+
+        <BaseTextInput label="Your name" placeholder="Enter your name" />
+
         <button @click="goToContactPage">
           Send Email
           <IconCommunity />
         </button>
       </div>
       <div>
-
       </div>
     </div>
   </main>
@@ -337,6 +341,10 @@ main h2 {
 }
 
 /*-------------------------------contact me---------------------------*/
+#contact-me {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 #contact-me h2 {
   font-weight: 400;
@@ -434,7 +442,8 @@ main h2 {
     max-width: 500px;
     height: auto;
     object-fit: fill;
-    margin-top: 50px;
+    margin-top: 100px;
+    /* display: none; */
   }
 }
 
