@@ -184,7 +184,9 @@ export default defineComponent({
         </h2>
         <p>Let&apos;s talk about everything</p>
 
-        <BaseTextInput label="Your name" placeholder="Enter your name" />
+        <BaseTextInput label="Fullname" placeholder="Enter your name" />
+        <BaseTextInput label="Email" placeholder="Enter your email" />
+
 
         <button @click="goToContactPage">
           Send Email
