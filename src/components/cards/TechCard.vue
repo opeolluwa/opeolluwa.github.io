@@ -23,7 +23,7 @@ export default {
     font-size: 100px;
     display: inline-block;
     padding: 5px;
-    border: 1px solid #f2f2f2;
+
     border-radius: 5px;
     filter: grayscale(100%) brightness(45%);
     -webkit-filter: grayscale(100%) brightness(45%);
@@ -40,7 +40,6 @@ export default {
     font-size: 65px;
     display: inline-block;
     padding: 5px;
-    border: 1px solid #f2f2f2;
     border-radius: 5px;
     filter: grayscale(100%) brightness(45%);
     -webkit-filter: grayscale(100%) brightness(45%);
@@ -51,6 +50,7 @@ export default {
     align-items: center;
   }
 }
+
 div {
   font-size: 50px;
   display: inline-flex;

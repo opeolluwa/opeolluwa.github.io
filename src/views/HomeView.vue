@@ -28,6 +28,20 @@ export default defineComponent({
   methods: {
     goToContactPage() {
       this.$router.push("/contact");
+    },
+    /**
+     * @function showTechInfo
+     * @param techName string - name of the technology e.g rust programming language
+     * @param techDescription string - description of the technology
+     * @param projects: array of project built with the technonlogy
+     */
+    showTechInfo(techName: string, techDescription: string, projects: Array<string> = []) {
+      console.log("clicked");
+      return {
+        techName,
+        techDescription,
+        projects,
+      }
     }
   },
   data: () => ({
@@ -42,6 +56,7 @@ export default defineComponent({
         itemsToShow: 2.75,
         snapAlign: "center",
       },
+      hover: false
     },
     showModal: false,
     stack: [
@@ -58,7 +73,7 @@ export default defineComponent({
       },
 
       {
-        tech: "rust programming language",
+        tech: "Linux Operating System",
         icon: "linux",
         url: "https://www.rust-lang.org/",
       },
@@ -75,12 +90,13 @@ export default defineComponent({
 
       {
         tech: "Syntactically Awesome Stylesheets",
-        icon: "mysql",
+        icon: "postgresql",
         url: "https://www.rust-lang.org/",
-        more:"-wordmark"
+
       },
     ],
   }),
+
 });
 </script>
 <template>
@@ -106,7 +122,9 @@ export default defineComponent({
         </div>
       </div>
       <!--hero illustration-->
-      <div></div>
+      <div>
+        <img src="@/assets/images/ope.png" alt="Opeoluwa" id="avatar" />
+      </div>
     </div>
 
     <!--recent section-->
@@ -192,12 +210,13 @@ main h2 {
 #hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-position: center center;
   background: #ffffff;
   background: -webkit-linear-gradient(bottom, #ffffff, #c9cde0);
   background: -moz-linear-gradient(bottom, #ffffff, #f2f4ff);
   background: linear-gradient(to top, #ffffff, #f2f4ff);
+  padding: 70px unset;
 }
 
 #hero div:first-child h1 {
@@ -218,7 +237,7 @@ main h2 {
   line-height: 36px;
   color: #494949;
   object-fit: contain;
-  max-width: 50%;
+  max-width: 80%;
 }
 
 #hero div:first-child h1+p::first-letter {
@@ -254,6 +273,14 @@ main h2 {
 #hero div:first-child div a::last-of-type {
   background: #ffffff;
   color: #000000;
+}
+
+/**the hero illustartion */
+#avatar {
+  width: auto;
+  max-width: 500px;
+  height: auto;
+  object-fit: fill;
 }
 
 /*----------------------------about section--------------------- */
@@ -316,6 +343,7 @@ main h2 {
   font-size: 40px;
   line-height: 36px;
   margin-bottom: 0px;
+  padding: 0 !important;
 }
 
 #contact-me h2+p {
@@ -399,6 +427,14 @@ main h2 {
 
   #tech-stack #tech-info {
     display: none;
+  }
+
+  #avatar {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: fill;
+    margin-top: 50px;
   }
 }
 
