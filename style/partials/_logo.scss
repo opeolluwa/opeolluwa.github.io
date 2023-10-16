@@ -1,0 +1,12 @@
+#app-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+#app-logo a {
+  color: var(--default-dark-color);
+  font-family: "Bakbak One", cursive;
+  text-decoration: none;
+}
