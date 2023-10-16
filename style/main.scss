@@ -1,4 +1,10 @@
-body {
-	font-family: sans-serif;
-	text-align: center;
-}
+@import "reset";
+@import "variables";
+@import "mixins";
+
+@import "partials/nav";
+@import "partials/logo";
+
+@import "pages/index";
+
+
