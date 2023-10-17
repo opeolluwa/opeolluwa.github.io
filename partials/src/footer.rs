@@ -3,8 +3,8 @@ use leptos::*;
 #[component]
 pub fn AppFooter() -> impl IntoView {
     view! {
-        <footer>
-            <div class="view">
+        <footer class="bg-yellow-500 px-[100px]">
+            <div>
                 <div class="social">
                     <a href="https://github.com/opeolluwa" target="_blank">
                         <i class="devicon-github-plain"></i>
