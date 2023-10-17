@@ -1,21 +1,29 @@
-use crate::{
-    app::components::app_navigation::AppNavigation,
-    error_template::{AppError, ErrorTemplate},
-};
+use crate::error_template::{AppError, ErrorTemplate};
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
-
-mod components;
-mod partials;
+use partials::{footer::AppFooter, nav::AppNavigation};
 
 #[component]
+
 pub fn App() -> impl IntoView {
     // Provides context that manages stylesheets, titles, meta tags, etc.
     provide_meta_context();
 
     view! {
         <Stylesheet id="leptos" href="/pkg/opeolluwa.css"/>
+
+        // import icons library
+        <Link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+
+        // favicon
+        <Link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
+        <Link rel="icon" type_="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"/>
+        <Link rel="icon" type_="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"/>
+        <Link rel="manifest" href="src/assets/favicon/site.webmanifest"/>
 
         // sets the document title
         <Title text="Adeoye Adefemi"/>
@@ -38,96 +46,25 @@ pub fn App() -> impl IntoView {
 /// Renders the home page of your application.
 #[component]
 fn HomePage() -> impl IntoView {
-    view! { <main>
-       <AppNavigation/>
-       
-      </main> }
+    view! {
+        <AppNavigation/>
+        <header>
+            <div>
+                <h1 class="text-5xl">Hey there r#"👋"# <br/> r#"I'm"# <span>Opeoluwa</span> ,</h1>
+                <p class="leading-1 mt-4 hidden">
+                    r#"a software developer driven by need for optimized solution. I take
+                    interest in scaffolding application's backend whilst aiming at
+                    becoming an embedded systems engineer."#
+                </p>
+            </div>
+            <div>
+
+                <img src="./public/images/opeolluwa.jpg" alt="Hero Image"/>
+            </div>
+        </header>
+        <main >
+
+        </main>
+        <AppFooter/>
+    }
 }
-
-//  <AppNavigation class="view no-mb" />
-//       <div id="hero" class="view">
-//         <!--hero text-->
-//         <div>
-//           <h1>
-//             Hey there 👋 <br />
-//             I&apos;m <span class="emphasis">Opeoluwa</span>,
-//           </h1>
-//           <p>
-//             a software developer driven by need for optimized solution. I take
-//             interest in scaffolding application&apos;s backend whilst aiming at
-//             becoming an embedded systems engineer.
-//           </p>
-//           <div>
-//             <router-link :to="{ name: 'projects' }">Explore Projects
-//               <IconArrowRight />
-//             </router-link>
-//             <!-- <a href="#">Download CV</a> -->
-//           </div>
-//         </div>
-//         <!--hero illustration-->
-//         <div></div>
-//       </div>
-
-//       <!--recent section-->
-//       <div id="projects" class="view">
-//         <h2>
-//           Checkout my <br /><span class="emphasis capitalize">recent Projects</span>
-//         </h2>
-//         <Carousel :items-to-show="1.25" :wrap-around="true" :breakpoints="breakpoints">
-//           <Slide v-for="slide in 10" :key="slide">
-//             <ProjectCard :title="''" :description="''" />
-//           </Slide>
-
-//           <template #addons> </template>
-//         </Carousel>
-//         <router-link :to="{ name: 'projects' }" class="emphasis">view more
-//           <IconRight />
-//         </router-link>
-//       </div>
-
-//       <!------------------------------my awesome technology stack---------------------->
-//       <div id="tech-stack" class="view">
-//         <h2>
-//           My
-//           <span class="emphasis capitalize">core technology</span> <br />
-//           Stack 🚀
-//         </h2>
-//         <!--project card container-->
-//         <div>
-//           <div>
-//             <TechCard v-for="(item, index) in stack" :colored="'colored'" :icon="item.icon" :key="index" />
-//           </div>
-//           <div id="tech-info">
-//             <h3>Technology name</h3>
-//             <p>
-//               technology description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel nobis doloremque hic
-//               inventore sint explicabo deserunt
-//               putting except
-//             </p>
-//             <h4>Projects</h4>
-//             <ul>
-//               <li>project one</li>
-//               <li>project one</li>
-//               <li>project one</li>
-//               <li>project one</li>
-//             </ul>
-//           </div>
-//         </div>
-//       </div>
-
-//       <!-------------------------------contact me--------------------------->
-//       <div id="contact-me" class="view">
-//         <div>
-//           <h2>
-//             Send a <br /><span class="emphasis capitalize">Quick</span> message
-//           </h2>
-//           <p>Let&apos;s talk about everything</p>
-//           <button @click="goToContactPage">
-//             Send Email
-//             <IconCommunity />
-//           </button>
-//         </div>
-//         <div>
-
-//         </div>
-//       </div>

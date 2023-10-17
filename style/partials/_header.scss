@@ -1,0 +1,37 @@
+header {
+  @extend %spacing;
+  padding: 30px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center center;
+  background: #ffffff;
+  background: linear-gradient(to top, #ffffff, #f2f4ff);
+  h1 {
+    font-family: Bakbak One;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 50px;
+  }
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    color: #494949;
+    object-fit: contain;
+    max-width: 50%;
+    margin: 20px 0;
+  }
+  p::first-letter {
+    text-transform: capitalize;
+  }
+  span {
+    font-family: "Bakbak One", sans-serif !important;
+    color: $base-color;
+    margin: 0 3px;
+  }
+}
