@@ -59,13 +59,11 @@ fn HomePage() -> impl IntoView {
             </div>
             <div>
 
-                <img src="assets/images/opeolluwa.jpg" alt="Hero Image"/>
+                <img src="./assets/images/opeolluwa.jpg" alt="Hero Image"/>
             </div>
         </header>
-        <main class="mt-[400px]">
-            <section id="about" class="mt-[400px] bg-yellow-500">
-                lorem
-            </section>
+        <main >
+         
         </main>
         <AppFooter/>
     }
