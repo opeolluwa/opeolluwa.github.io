@@ -20,23 +20,9 @@ pub fn App() -> impl IntoView {
         />
 
         // favicon
-        <Link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="src/assets/favicon/apple-touch-icon.png"
-        />
-        <Link
-            rel="icon"
-            type_="image/png"
-            sizes="32x32"
-            href="src/assets/favicon/favicon-32x32.png"
-        />
-        <Link
-            rel="icon"
-            type_="image/png"
-            sizes="16x16"
-            href="src/assets/favicon/favicon-16x16.png"
-        />
+        <Link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
+        <Link rel="icon" type_="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"/>
+        <Link rel="icon" type_="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"/>
         <Link rel="manifest" href="src/assets/favicon/site.webmanifest"/>
 
         // sets the document title
@@ -63,20 +49,23 @@ fn HomePage() -> impl IntoView {
     view! {
         <AppNavigation/>
         <header>
-          <div>
-                <h1 class="text-5xl">
-                    Hey there r#"👋"# <br/>  r#"I'm"# <span>Opeoluwa</span>,
-                </h1>
+            <div>
+                <h1 class="text-5xl">Hey there r#"👋"# <br/> r#"I'm"# <span>Opeoluwa</span> ,</h1>
                 <p class="leading-1 mt-4 hidden">
                     r#"a software developer driven by need for optimized solution. I take
                     interest in scaffolding application's backend whilst aiming at
                     becoming an embedded systems engineer."#
                 </p>
             </div>
-            <div>kkk</div>
+            <div>
+
+                <img src="assets/images/opeolluwa.jpg" alt="Hero Image"/>
+            </div>
         </header>
-        <main>
-          
+        <main class="mt-[400px]">
+            <section id="about" class="mt-[400px] bg-yellow-500">
+                lorem
+            </section>
         </main>
         <AppFooter/>
     }

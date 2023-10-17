@@ -84,7 +84,7 @@ style-file = "style/main.scss"
 # The tailwind input file.
 #
 # Optional, Activates the tailwind build
-# tailwind-input-file = "style/tailwind.css"
+tailwind-input-file = "style/tailwind.css"
 
 #
 # Optional. Env: LEPTOS_ASSETS_DIR.
