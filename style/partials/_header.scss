@@ -6,13 +6,7 @@ header {
   justify-content: space-between;
   background-position: center center;
   background: #ffffff;
-  background: radial-gradient(
-      42.94% 42.94% at 77.26% 57.06%,
-      $base-color 38.54%,
-      #f9fef9 40.62%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
+  background: linear-gradient(to top, #ffffff, #f2f4ff);
   h1 {
     font-family: Bakbak One;
     font-size: 64px;
@@ -20,6 +14,7 @@ header {
     line-height: 75px;
     letter-spacing: 0em;
     text-align: left;
+    padding-top: 50px;
   }
   p {
     font-style: normal;
@@ -29,9 +24,14 @@ header {
     color: #494949;
     object-fit: contain;
     max-width: 50%;
+    margin: 20px 0;
+  }
+  p::first-letter {
+    text-transform: capitalize;
   }
   span {
     font-family: "Bakbak One", sans-serif !important;
     color: $base-color;
+    margin: 0 3px;
   }
 }

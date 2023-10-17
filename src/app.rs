@@ -62,16 +62,21 @@ pub fn App() -> impl IntoView {
 fn HomePage() -> impl IntoView {
     view! {
         <AppNavigation/>
-        <main>
-            // hero section
-            <div id="hero">
-                <h1>Hey there '👋' <br/> I&apos;m <span class="emphasis bg-yellow-300">Opeoluwa</span> ,</h1>
-                <p>
-                    a software developer driven by need for optimized solution. I take
-                    interest in scaffolding application&apos;s backend whilst aiming at
-                    becoming an embedded systems engineer.
+        <header>
+          <div>
+                <h1 class="text-5xl">
+                    Hey there r#"👋"# <br/>  r#"I'm"# <span>Opeoluwa</span>,
+                </h1>
+                <p class="leading-1 mt-4 hidden">
+                    r#"a software developer driven by need for optimized solution. I take
+                    interest in scaffolding application's backend whilst aiming at
+                    becoming an embedded systems engineer."#
                 </p>
             </div>
+            <div>kkk</div>
+        </header>
+        <main>
+          
         </main>
         <AppFooter/>
     }
