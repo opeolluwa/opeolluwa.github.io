@@ -88,7 +88,7 @@ style-file = "style/main.scss"
 
 #
 # Optional. Env: LEPTOS_ASSETS_DIR.
-assets-dir = "assets"
+assets-dir = "public"
 
 # The IP and port (ex: 127.0.0.1:3000) where the server serves the content. Use it in your server setup.
 site-addr = "127.0.0.1:3000"

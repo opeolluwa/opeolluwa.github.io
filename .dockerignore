@@ -1,0 +1,14 @@
+target 
+
+.gitignore
+.env
+.env.example 
+.vscode
+.git 
+.dockerignore
+
+Dockerfile
+docker-compose.yml
+
+README.md
+LICENSE
