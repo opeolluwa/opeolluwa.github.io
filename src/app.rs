@@ -51,7 +51,8 @@ fn HomePage() -> impl IntoView {
         <header>
             <div>
                 <h1 class="text-5xl">
-                    Hey there r#"👋"# <br/> r#"I'm"# <span style="margin-left:3px">Opeoluwa</span>,
+                    Hey there r#"👋"# <br/> r#"I'm"# <span style="margin-left:3px">Opeoluwa</span>
+                    ,
 
                 </h1>
                 <p class="leading-1 mt-4 hidden">
@@ -67,8 +68,7 @@ fn HomePage() -> impl IntoView {
         <main>
             <section id="about"></section>
             <section id="project"></section>
-            <section id="contact">
-            </section>
+            <section id="contact"></section>
         </main>
         <AppFooter/>
     }

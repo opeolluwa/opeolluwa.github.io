@@ -1,4 +1,5 @@
 target 
+end2end 
 
 .gitignore
 .env
@@ -12,3 +13,5 @@ docker-compose.yml
 
 README.md
 LICENSE
+
+Cargo.lock

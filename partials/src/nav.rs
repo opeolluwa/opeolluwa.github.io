@@ -7,7 +7,18 @@ pub fn AppNavigation() -> impl IntoView {
         <nav>
             <AppLogo/>
 
-            <ul>{routes.into_iter().map(|route| view! { <li>{route}</li> }).collect_view()}</ul>
+            <ul>
+                {routes
+                    .into_iter()
+                    .map(|route| {
+                        view! {
+                            <li>
+                                <a href="">{route}</a>
+                            </li>
+                        }
+                    })
+                    .collect_view()}
+            </ul>
 
         // www.w3.org/2000/svg"
 
