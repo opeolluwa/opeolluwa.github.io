@@ -20,10 +20,10 @@ pub fn App() -> impl IntoView {
         />
 
         // favicon
-        <Link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
-        <Link rel="icon" type_="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"/>
-        <Link rel="icon" type_="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"/>
-        <Link rel="manifest" href="src/assets/favicon/site.webmanifest"/>
+        <Link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
+        <Link rel="icon" type_="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
+        <Link rel="icon" type_="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
+        <Link rel="manifest" href="favicon/site.webmanifest"/>
 
         // sets the document title
         <Title text="Adeoye Adefemi"/>
@@ -50,7 +50,10 @@ fn HomePage() -> impl IntoView {
         <AppNavigation/>
         <header>
             <div>
-                <h1 class="text-5xl">Hey there r#"👋"# <br/> r#"I'm"# <span>Opeoluwa</span> ,</h1>
+                <h1 class="text-5xl">
+                    Hey there r#"👋"# <br/> r#"I'm"# <span style="margin-left:3px">Opeoluwa</span>,
+
+                </h1>
                 <p class="leading-1 mt-4 hidden">
                     r#"a software developer driven by need for optimized solution. I take
                     interest in scaffolding application's backend whilst aiming at
@@ -58,12 +61,14 @@ fn HomePage() -> impl IntoView {
                 </p>
             </div>
             <div>
-
-                <img src="./public/images/opeolluwa.jpg" alt="Hero Image"/>
+                <img src="images/opeolluwa.jpg" alt="Hero Image"/>
             </div>
         </header>
-        <main >
-
+        <main>
+            <section id="about"></section>
+            <section id="project"></section>
+            <section id="contact">
+            </section>
         </main>
         <AppFooter/>
     }
