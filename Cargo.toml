@@ -23,6 +23,8 @@ leptos_router = {version = "0.5", features = ["nightly"]}
 log = "0.4"
 partials = {path = "partials"}
 simple_logger = "4"
+styled = "0.1.41"
+stylist = "0.13.0"
 thiserror = "1.0.38"
 tokio = {version = "1.25.0", optional = true}
 tower = {version = "0.4.13", optional = true}

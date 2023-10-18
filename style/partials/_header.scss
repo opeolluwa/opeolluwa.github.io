@@ -2,8 +2,10 @@ header {
   @extend %spacing;
   padding: 30px 100px;
   display: flex;
+  align-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
   background-position: center center;
   background: #ffffff;
   background: linear-gradient(to top, #ffffff, #f2f4ff);
@@ -28,6 +30,22 @@ header {
   }
   p::first-letter {
     text-transform: capitalize;
+  }
+
+  img {
+    max-width: 70%;
+
+    clip-path: circle(50% at 30% 36%);
+    clip-path: polygon(19% 13%, 100% 0%, 82% 99%, 0% 100%);
+    box-shadow: -8px 4px 28px -8px rgba(0, 0, 0, 0.75);
+
+    clip-path: polygon(6% 0, 100% 11%, 72% 95%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    border-radius: 2.5rem;
+    object-fit: scale-down;
+    display: none;
+    filter: grayscale(20%);
   }
   span {
     font-family: "Bakbak One", sans-serif !important;
