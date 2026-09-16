@@ -1,10 +1,5 @@
 <template>
-  <main>
-    <AppNav />
-    <HeroSection />
-    <ExperienceSection />
-    <SkillsSection />
-    <ProjectsSection />
-    <FooterSection />
-  </main>
+    <div>
+        <NuxtImg src="/hero.jpeg"/>
+    </div>
 </template>
